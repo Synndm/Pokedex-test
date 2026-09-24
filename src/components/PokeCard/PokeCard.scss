@@ -1,0 +1,159 @@
+.poke-card {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    &__number {
+        display: block;
+        margin-bottom: 0.5rem;
+
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #888;
+    }
+
+    &__image {
+        display: block;
+
+        width: 140px;
+        height: 140px;
+
+        margin: 0 auto;
+
+        object-fit: contain;
+    }
+
+    &__name {
+        margin: 0.75rem 0 1rem;
+
+        font-size: 1.25rem;
+        font-weight: 700;
+
+        text-transform: capitalize;
+        color: #222;
+    }
+
+    &__types {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    &__type {
+        padding: 0.35rem 0.75rem;
+
+        border-radius: 999px;
+
+        font-size: 0.75rem;
+        font-weight: 700;
+
+        text-transform: capitalize;
+
+        background: #eeeeee;
+        color: #333;
+    }
+
+    &__type--fire {
+        background: #ffb703;
+        color: #fff;
+    }
+
+    &__type--water {
+        background: #3b82f6;
+        color: #fff;
+    }
+
+    &__type--grass {
+        background: #4caf50;
+        color: #fff;
+    }
+
+    &__type--electric {
+        background: #facc15;
+        color: #222;
+    }
+
+    &__type--psychic {
+        background: #ec4899;
+        color: #fff;
+    }
+
+    &__type--ice {
+        background: #67e8f9;
+        color: #164e63;
+    }
+
+    &__type--dragon {
+        background: #6366f1;
+        color: #fff;
+    }
+
+    &__type--dark {
+        background: #374151;
+        color: #fff;
+    }
+
+    &__type--fairy {
+        background: #f9a8d4;
+        color: #831843;
+    }
+
+    &__type--fighting {
+        background: #dc2626;
+        color: #fff;
+    }
+
+    &__type--poison {
+        background: #9333ea;
+        color: #fff;
+    }
+
+    &__type--ground {
+        background: #a16207;
+        color: #fff;
+    }
+
+    &__type--flying {
+        background: #818cf8;
+        color: #fff;
+    }
+
+    &__type--bug {
+        background: #84cc16;
+        color: #fff;
+    }
+
+    &__type--rock {
+        background: #78716c;
+        color: #fff;
+    }
+
+    &__type--ghost {
+        background: #7c3aed;
+        color: #fff;
+    }
+
+    &__type--steel {
+        background: #64748b;
+        color: #fff;
+    }
+
+    &__type--normal {
+        background: #a8a29e;
+        color: #fff;
+    }
+}

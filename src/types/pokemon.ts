@@ -1,3 +1,14 @@
+export interface Pokemon {
+    id: number;
+    name: string;
+    height: number;
+    weight: number;
+    types: PokemonType[];
+    abilities: PokemonAbility[];
+    stats: PokemonStat[];
+    sprites: PokemonSprites;
+}
+
 export interface PokemonType {
     slot: number;
     type: {
@@ -6,13 +17,22 @@ export interface PokemonType {
     };
 }
 
-export interface Pokemon {
-    id: number;
-    name: string;
-    height: number;
-    weight: number;
-    types: PokemonType[];
-    sprites: PokemonSprites;
+export interface PokemonAbility {
+    ability: {
+        name: string;
+        url: string;
+    };
+    is_hidden: boolean;
+    slot: number;
+}
+
+export interface PokemonStat {
+    base_stat: number;
+    effort: number;
+    stat: {
+        name: string;
+        url: string;
+    };
 }
 
 export interface PokemonSprites {

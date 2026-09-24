@@ -3,11 +3,15 @@ import './PokeCard.scss';
 
 interface PokeCardProps {
     pokemon: Pokemon;
+    onClick: (pokemon: Pokemon) => void;
 }
 
-function PokeCard({ pokemon }: PokeCardProps) {
+function PokeCard({ pokemon, onClick }: PokeCardProps) {
     return (
-        <article className="poke-card">
+        <article
+            className="poke-card"
+            onClick={() => onClick(pokemon)}
+        >
             <span className="poke-card__number">
                 #{pokemon.id.toString().padStart(3, '0')}
             </span>

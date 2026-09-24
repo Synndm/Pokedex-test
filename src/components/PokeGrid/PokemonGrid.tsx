@@ -4,15 +4,20 @@ import './PokeGrid.scss';
 
 interface PokemonGridProps {
     pokemons: Pokemon[];
+    onPokemonClick: (pokemon: Pokemon) => void;
 }
 
-function PokemonGrid({ pokemons }: PokemonGridProps) {
+function PokemonGrid({
+    pokemons,
+    onPokemonClick,
+}: PokemonGridProps) {
     return (
         <section className="pokemon-grid">
             {pokemons.map((pokemon) => (
                 <PokeCard
                     key={pokemon.id}
                     pokemon={pokemon}
+                    onClick={onPokemonClick}
                 />
             ))}
         </section>

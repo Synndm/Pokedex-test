@@ -10,7 +10,7 @@ function PokemonAbilities({
 }: PokemonAbilitiesProps) {
     return (
         <section className="pokemon-abilities">
-            <h3>Skills</h3>
+            <h3>Habilidades</h3>
 
             <div className="pokemon-abilities__list">
                 {abilities.map((ability) => (

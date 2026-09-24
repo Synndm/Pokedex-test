@@ -8,10 +8,7 @@ interface PokeCardProps {
 
 function PokeCard({ pokemon, onClick }: PokeCardProps) {
     return (
-        <article
-            className="poke-card"
-            onClick={() => onClick(pokemon)}
-        >
+        <article className="poke-card">
             <span className="poke-card__number">
                 #{pokemon.id.toString().padStart(3, '0')}
             </span>
@@ -19,11 +16,20 @@ function PokeCard({ pokemon, onClick }: PokeCardProps) {
             <img
                 className="poke-card__image"
                 src={pokemon.sprites.front_default ?? ''}
-                alt={`Imagem do ${pokemon.name}`}
+                alt=""
+                loading="lazy"
             />
 
             <h2 className="poke-card__name">
-                {pokemon.name}
+                {/* O ::after do botão cobre o card inteiro, então o card todo é clicável */}
+                <button
+                    type="button"
+                    className="poke-card__button"
+                    onClick={() => onClick(pokemon)}
+                    aria-haspopup="dialog"
+                >
+                    {pokemon.name}
+                </button>
             </h2>
 
             <div className="poke-card__types">

@@ -21,9 +21,10 @@ function SearchBar({ onSearch }: SearchBarProps) {
     }
 
     return (
-        <form className="search-bar" onSubmit={handleSubmit}>
+        <form className="search-bar" role="search" onSubmit={handleSubmit}>
             <input
-                type="text"
+                type="search"
+                aria-label="Buscar Pokémon por nome ou número"
                 placeholder="Pesquise por nome ou número..."
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}

@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+
 .pokemon-abilities {
     margin-top: 2rem;
 
@@ -36,7 +38,7 @@
 
         border-radius: 0.35rem;
 
-        background: #646cff;
+        background: $color-primary;
         color: #fff;
 
         font-size: 0.65rem;

@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+
 .poke-card {
     position: relative;
     padding: 1.5rem;
@@ -11,9 +13,48 @@
         transform 0.2s ease,
         box-shadow 0.2s ease;
 
-    &:hover {
+    @media (max-width: $breakpoint-mobile) {
+        padding: 1rem 0.5rem;
+    }
+
+    &:hover,
+    &:focus-within {
         transform: translateY(-5px);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    &__button {
+        padding: 0;
+
+        border: none;
+
+        background: none;
+        color: inherit;
+
+        font: inherit;
+        text-transform: inherit;
+
+        cursor: pointer;
+
+        // Estica a área clicável do botão para o card inteiro
+        &::after {
+            content: '';
+
+            position: absolute;
+            inset: 0;
+
+            border-radius: inherit;
+        }
+
+        // O contorno de foco vai para o card, não só para o nome
+        &:focus-visible {
+            outline: none;
+
+            &::after {
+                outline: 3px solid $color-primary;
+                outline-offset: 2px;
+            }
+        }
     }
 
     &__number {
@@ -34,6 +75,11 @@
         margin: 0 auto;
 
         object-fit: contain;
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 96px;
+            height: 96px;
+        }
     }
 
     &__name {
@@ -41,6 +87,10 @@
 
         font-size: 1.25rem;
         font-weight: 700;
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 1rem;
+        }
 
         text-transform: capitalize;
         color: #222;

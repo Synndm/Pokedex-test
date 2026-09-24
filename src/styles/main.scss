@@ -1,0 +1,13 @@
+@use 'reset';
+@use 'variables' as *;
+
+body {
+    background: $color-background;
+    color: $color-text;
+}
+
+// Contorno visível só para quem navega pelo teclado
+:focus-visible {
+    outline: 3px solid $color-primary;
+    outline-offset: 2px;
+}

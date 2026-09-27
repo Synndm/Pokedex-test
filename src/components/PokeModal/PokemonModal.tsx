@@ -4,6 +4,7 @@ import './PokemonModal.scss';
 import PokemonStats from '../PokeStatus/PokemonStatus';
 import PokemonAbilities from '../PokemonAbilities/PokemonAbilities';
 import SpriteViewer from '../SpriteViewer/SpriteViewer';
+import PokemonNotes from '../PokemonNotes/PokemonNotes';
 
 interface PokemonModalProps {
     pokemon: Pokemon;
@@ -105,6 +106,8 @@ function PokemonModal({
                 <PokemonStats
                     stats={pokemon.stats}
                 />
+
+                <PokemonNotes pokemonId={pokemon.id} />
             </div>
         </div>
     );
